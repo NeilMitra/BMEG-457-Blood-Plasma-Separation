@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma Separation Simulation Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .metric:last-child {
+            border-bottom: none;
+        }
+        .metric-label {
+            font-weight: 500;
+            color: #7f8c8d;
+        }
+        .metric-value {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 500;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .timestamp {
+            text-align: right;
+            color: #95a5a6;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+        .plot-container {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .plot-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .best-value {
+            background-color: #d4edda;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plasma Separation Simulation Report</h1>
+    <p><strong>Simulation Date:</strong> 2025-11-20 22:56:40</p>
+    <p><strong>Description:</strong> Comprehensive analysis of capillary-driven plasma separation using nanomaterial filters (NMF) on Whatman Fusion 5 paper devices.</p>
+    
+    <h2>Input Parameters</h2>
+    <div class="card">
+        <h3>Blood Properties</h3>
+        <div class="metric">
+            <span class="metric-label">RBC Diameter:</span>
+            <span class="metric-value">7.5 µm</span>
+        </div>
+        <div class="metric">
+            <span class="metric-label">RBC Count:</span>
+            <span class="metric-value">5.00e+06 per µL</span>
+        </div>
+        <div class="metric">
+            <span class="metric-label">RBC Charge:</span>
+            <span class="metric-value">-15.0 mV</span>
+        </div>
+        <div class="metric">
+            <span class="metric-label">Protein Diameter:</span>
+            <span class="metric-value">6.0 nm</span>
+        </div>
+        <div class="metric">
+            <span class="metric-label">Protein Charge:</span>
+            <span class="metric-value">-5.0 mV</span>
+        </div>
+        <div class="metric">
+            <span class="metric-label">Hematocrit:</span>
+            <span class="metric-value">45.00%</span>
+        </div>
+    </div>
+    
+    <h2>Performance Summary</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Material</th>
+                <th>Time to Target (min)</th>
+                <th>Avg Flux (µL/s)</th>
+                <th>Max Pressure (kPa)</th>
+                <th>RBC Capture (%)</th>
+                <th>Protein Pass (%)</th>
+                <th>Recovery (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr>
+            <td><strong>Graphene Oxide</strong></td>
+            <td class="best-value">120.00</td>
+            <td class="">0.0000</td>
+            <td>5613.27</td>
+            <td>95.7</td>
+            <td>15.5</td>
+            <td class="">0.0</td>
+        </tr>
+        
+        <tr>
+            <td><strong>Cellulose Nanocrystals</strong></td>
+            <td class="best-value">120.00</td>
+            <td class="">0.0000</td>
+            <td>15787.31</td>
+            <td>95.8</td>
+            <td>53.2</td>
+            <td class="">0.0</td>
+        </tr>
+        
+        <tr>
+            <td><strong>Electrospun Nanofibers</strong></td>
+            <td class="best-value">120.00</td>
+            <td class="best-value">0.0000</td>
+            <td>202.08</td>
+            <td>96.5</td>
+            <td>86.8</td>
+            <td class="best-value">0.4</td>
+        </tr>
+        
+        </tbody>
+    </table>
+    
+    <h2>Visualization Results</h2>
+    
+    <div class="plot-container">
+        <h3>Volume vs Time Comparison</h3>
+        <img src="01_volume_vs_time.png" alt="Volume vs Time">
+    </div>
+    
+    <div class="plot-container">
+        <h3>Flux Rate Evolution</h3>
+        <img src="02_flux_rate.png" alt="Flux Rate">
+    </div>
+    
+    <div class="plot-container">
+        <h3>Filter Clogging Progression</h3>
+        <img src="03_clogging_factor.png" alt="Clogging Factor">
+    </div>
+    
+    <div class="plot-container">
+        <h3>Pressure Drop Analysis</h3>
+        <img src="04_pressure_drop.png" alt="Pressure Drop">
+    </div>
+    
+    <div class="plot-container">
+        <h3>Separation Efficiency</h3>
+        <img src="05_separation_efficiency.png" alt="Separation Efficiency">
+    </div>
+    
+    <div class="plot-container">
+        <h3>Comparative Performance Metrics</h3>
+        <img src="06_performance_comparison.png" alt="Performance Comparison">
+    </div>
+    
+    <h2>Animations</h2>
+    <p>Cross-sectional animations showing particle dynamics are available as GIF files:</p>
+    <ul>
+        <li><a href="animation_GO.gif">Graphene Oxide Animation (GIF)</a></li><li><a href="animation_CNC.gif">Cellulose Nanocrystals Animation (GIF)</a></li><li><a href="animation_ENF.gif">Electrospun Nanofibers Animation (GIF)</a></li>
+    </ul>
+    
+    <h2>Data Files</h2>
+    <p>Complete simulation data is available in the following formats:</p>
+    <ul>
+        <li><a href="summary_comparison.csv">Summary Comparison (CSV)</a></li>
+        <li><a href="input_parameters.csv">Input Parameters (CSV)</a></li>
+        <li><a href="complete_results.json">Complete Results (JSON)</a></li>
+        <li><a href="timeseries_GO.csv">Graphene Oxide Time Series (CSV)</a></li><li><a href="timeseries_CNC.csv">Cellulose Nanocrystals Time Series (CSV)</a></li><li><a href="timeseries_ENF.csv">Electrospun Nanofibers Time Series (CSV)</a></li>
+    </ul>
+    
+    <div class="timestamp">
+        <p>Report generated on 2025-11-20 22:56:40</p>
+    </div>
+</body>
+</html>
+    
